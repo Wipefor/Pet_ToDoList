@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 90px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #7c1e85;
+    clear: both;
+}
+
+/* Form Styles */
+.add-form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-form input[type="number"] {
+    width: 100px;
+    margin: 0 10px;
+}
+
+.add-form button {
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Task List Styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-list-header__dates {
+    display: flex;
+    gap: 30px;
+}
+
+/* Date Cells */
+.text_dates {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-left: auto;
+}
+
+.text_dates span,
+.date-cell {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+.task-list-header__date-column_cr,
+.task-list-header__date-column_dl,
+.task-list-header__date-column_cp {
+    width: 120px;
+    text-align: center;
+}
+
+/* Status Styles */
+.completed-no-deadline,
+.completed-on-time {
+    color: #bbd2bf;
+    background-color: #f0f9f0;
+}
+
+.completed-overdue,
+.not-completed-overdue {
+    color: #ff4444;
+    background-color: #ffeeee;
+}
+
+/* Action Buttons */
+.actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.actions .complete {
+    background: #258f56;
+}
+
+.actions .delete {
+    background: #f5a9a9;
+}
+
+/* Miscellaneous */
+.empty-date {
+    color: #999;
+    font-style: italic;
+}
+.error {
+    color: #ff4444;
+    margin-bottom: 10px;
+}
