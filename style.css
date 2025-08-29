@@ -1,16 +1,62 @@
+:root {
+    --background-color: #d1d1d1;
+    --container-color: #f5f5f5;
+    --text-color: #000000;
+    --hyperlink-color: #0066cc;
 
+    --header-bg: #abababaf;
+    --header-text: #7c1e85;
+
+    --button-bg: #4CAF50;
+    --button-text: #ffffff;
+
+    --input-border: #cccccc;
+
+    --completed-green: #3f964e;
+    --completed-green-bg: #c5e5cb;
+    --completed-red: #ff4444;
+    --completed-red-bg: #fcc;
+}
+
+body.dark {
+    --background-color: #4a4a4a;
+    --container-color: #292929;
+    --text-color: #e0e0e0;
+    --hyperlink-color: #4da6ff;
+
+    --header-bg: #1e1e1e;
+    --header-text: #f0850c;
+
+    --button-bg: #4CAF50;
+    --button-text: #121212;
+
+    --input-border: #444444;
+
+    --completed-green: #798a7c;
+    --completed-green-bg: #35573b;
+    --completed-red: #fc7c7c;
+    --completed-red-bg: #6b2b2b;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
 }
-
+.theme-button {
+    background: var(--container-color);
+}
+.greetings {
+    color: var(--text-color);
+}
+.hyperlink{
+    color: var(--hyperlink-color);
+}
 .container {
     max-width: 900px;
     margin: 0 auto;
-    background: white;
+    background: var(--container-color);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 90px rgba(0,0,0,0.1);
@@ -18,39 +64,53 @@ body {
 
 h2 {
     text-align: center;
-    color: #7c1e85;
+    color: var(--header-text);
     clear: both;
+}
+h3 {
+    color: var(--text-color);
 }
 
 /* Form Styles */
 .add-form {
+    background: var(--container-color);
+    color: var(--text-color);
     display: flex;
     margin-bottom: 10px;
+    font-size: 26px;
 }
 
 .add-form input {
     flex: 1;
     padding: 10px;
-    border: 2px solid #ddd;
+    background: var(--container-color);
+    color: var(--text-color);
+    border: 2px solid var(--input-border);
     border-radius: 4px;
 }
 
 .add-form input[type="number"] {
+    background: var(--container-color);
+    color: var(--text-color);
     width: 100px;
     margin: 0 10px;
 }
-
+.add-form input::placeholder {
+    font-style: italic;
+    color: var(--text-color);
+    font-size: 16px;
+}
 .add-form button {
     padding: 10px 15px;
-    background: #4CAF50;
-    color: white;
+    background: var(--button-bg);
+    color: var(--button-text);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Task List Styles */
 .task-list {
+    color: var(--text-color);
     list-style: none;
     padding: 0;
 }
@@ -60,7 +120,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--input-border);
 }
 
 .task-list-header {
@@ -68,9 +128,9 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: #f5f5f5;
+    background: var(--header-bg);
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--input-border);
 }
 
 .task-list-header__dates {
@@ -93,9 +153,9 @@ h2 {
     text-align: center;
 }
 
-.task-list-header__date-column_cr,
-.task-list-header__date-column_dl,
-.task-list-header__date-column_cp {
+.task-list-header__date-column_created,
+.task-list-header__date-column_deadline,
+.task-list-header__date-column_completed {
     width: 120px;
     text-align: center;
 }
@@ -103,14 +163,14 @@ h2 {
 /* Status Styles */
 .completed-no-deadline,
 .completed-on-time {
-    color: #bbd2bf;
-    background-color: #f0f9f0;
+    color: var(--completed-green);
+    background-color: var(--completed-green-bg);
 }
 
 .completed-overdue,
 .not-completed-overdue {
-    color: #ff4444;
-    background-color: #ffeeee;
+    color: var(--completed-red);
+    background-color: var(--completed-red-bg);
 }
 
 /* Action Buttons */
@@ -128,7 +188,7 @@ h2 {
 }
 
 .actions .delete {
-    background: #f5a9a9;
+    background: #ff6969;
 }
 
 /* Miscellaneous */

@@ -30,16 +30,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 <div class="container">
-    <h2>Log-Into-TheSystem</h2>
+    <script src="toggleTheme.js"></script>
+    <button id="theme-toggle" onclick="toggleTheme()" class="theme-button" >
+        🌙
+    </button>
+    <h2>Log-Into-System</h2>
     <?php if (isset($error)): ?>
         <div class="error"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
-    <form method="POST">
-        <input type="text" name="username" placeholder="UserName" required>
-        <input type="password" name="password" placeholder="PassWord" required>
+    <form method="POST" class="add-form">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
         <button type="submit">LogIn</button>
     </form>
-    <p>No account? <a href="register.php">Register account</a></p>
+    <p  class="greetings" >No account? <a class="hyperlink" href="register.php">Register account</a></p>
 </div>
 </body>
     </html>
